@@ -1,17 +1,28 @@
 <template>
-  <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event" />
+  <div class="producer">
+    <div class="producer-content">
+      <h1>Events Producer</h1>
+      <EventCategories v-for="event in events" :key="event.id" :event="event" />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import EventCard from '../components/EventCard.vue'
+import EventCategories from '../components/EventCategories.vue'
 
 export default {
-  name: 'App',
+  name: 'EventProducer',
+  // props: {
+  // msg: String
+  // }
   components: {
-    EventCard
+    EventCategories
+  },
+  props: {
+    event: {
+      type: Object,
+      required: true
+    }
   },
   data() {
     return {
@@ -56,23 +67,17 @@ export default {
 </script>
 
 <style scoped>
-.events {
+.producer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.producer-content {
+  border: 1px solid blue;
+  padding: 15px;
+  width: 300px;
+}
 h4 {
   font-size: 20px;
-}
-</style>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

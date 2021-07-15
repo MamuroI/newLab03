@@ -1,8 +1,10 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">EventList</router-link> |
+    <router-link to="/producer">EventProducer</router-link> |
     <router-link to="/about">About</router-link>
   </div>
+  <!-- new element -->
   <router-view />
 </template>
 

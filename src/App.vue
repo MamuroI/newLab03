@@ -2,6 +2,7 @@
   <div id="nav">
     <router-link to="/">EventList</router-link> |
     <router-link to="/producer">EventProducer</router-link> |
+    <router-link to="/students">StudentList</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <!-- new element -->

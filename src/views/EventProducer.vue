@@ -18,12 +18,6 @@ export default {
   components: {
     EventCategories
   },
-  props: {
-    event: {
-      type: Object,
-      required: true
-    }
-  },
   data() {
     return {
       events: [
